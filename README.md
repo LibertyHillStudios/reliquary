@@ -96,8 +96,10 @@ in Blizzard's own code for the build: the `forever` branch of
 
 ## Contributing
 
-Bug reports, ideas and pull requests are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). The
-changelog is [CHANGELOG.md](CHANGELOG.md).
+Bug reports, ideas and pull requests are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). Rather
+email? Send bug reports and suggestions to
+[support@libertyhillstudio.com](mailto:support@libertyhillstudio.com). The changelog is
+[CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

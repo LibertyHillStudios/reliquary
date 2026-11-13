@@ -3,6 +3,9 @@ contact_links:
   - name: Liberty Hill Studios
     url: https://libertyhillstudio.com
     about: The studio that makes Reliquary.
+  - name: Email a bug report or suggestion
+    url: mailto:support@libertyhillstudio.com
+    about: Rather email? Send it to support@libertyhillstudio.com.
   - name: A security problem
     url: https://github.com/LibertyHillStudios/reliquary/blob/main/SECURITY.md
     about: Please report these by email, not in a public issue.

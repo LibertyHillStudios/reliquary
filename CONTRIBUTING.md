@@ -9,6 +9,9 @@ Open an issue with the bug form. Say which version of Reliquary you have (the Cu
 it, as does the `## Version:` line of `Reliquary.toc`), what you did and what happened. If the game
 showed a Lua error, paste it; the game also writes every Lua error to `_forever_/Logs/General.log`.
 
+Rather email? Send bug reports and suggestions to
+[support@libertyhillstudio.com](mailto:support@libertyhillstudio.com).
+
 ## Pull requests
 
 - Run `tools/test.sh` before you send one. A new test should fail with the change taken out.
