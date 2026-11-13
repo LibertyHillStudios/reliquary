@@ -1,5 +1,9 @@
 # Reliquary
 
+## 1.8.0 (2026-11-12)
+
+- **Guild and friends see a new character from the start.** A character you log in with for the first time shares everything with your guild and your friends, and nothing with anyone else; a line in chat says so, and `/rq share` or the Sharing tab of `/rq` changes it. Share with anyone and they see its gear, talents, professions and character sheet until you choose more. A new install shares its prices and sources with the guild too. Characters you already have keep exactly what they shared.
+
 ## 1.7.3 (2026-11-12)
 
 - Reliquary is now open source under the Apache License 2.0. Read the code, report a bug or suggest an idea at https://github.com/LibertyHillStudios/reliquary.

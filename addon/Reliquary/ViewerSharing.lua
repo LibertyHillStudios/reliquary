@@ -299,7 +299,7 @@ local function buildSharing(panel)
         { "tipLine", "Lines on item tooltips", "Under an item: its auction price, who in the guild it's set aside for or would be an upgrade for, who in your guild, among your friends and your characters can make it, uses it in a recipe or could learn it, and who else has it." },
         { "headsUp", "Gear news when I log in", "At most one line: gear set aside for you, and new upgrades for you in the guild bank." },
         { "craftNews", "Who can use what I loot", "A line in chat when you loot something no profession of yours uses but a guildmate's, a friend's or another of your characters' recipes do. Once a day for each item." },
-        { "sharePrices", "Share prices and sources", "Your auction scans and your notes of where items come from go to guildmates who use Reliquary. Theirs come to you either way, and Blizzard's own prices pass through the guild either way. Off until you turn it on.", true },
+        { "sharePrices", "Share prices and sources", "Your auction scans and your notes of where items come from go to guildmates who use Reliquary. Theirs come to you either way, and Blizzard's own prices pass through the guild either way.", true },
     }) do
         local middle = y - SHARING.row / 2
         local box = Skin.check(grid)

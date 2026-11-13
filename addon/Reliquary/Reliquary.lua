@@ -18,9 +18,18 @@ ns = ns or {}
 
 -- 2: each character has share = { guild, friends, public, parts }; db.guilds and db.peers hold
 -- the guild roster, the guild bank and what other players share (Share.lua).
-local SCHEMA = 2
+-- 3: every character's share.parts names each part: a new character shares all of it with its
+-- guild and friends, and the characters from before keep what they showed.
+local SCHEMA = 3
 -- The parts of a character others may be shown (Share.lua chooses, per part, who sees it).
 ns.PARTS = { "gear", "talents", "profs", "stats", "gold", "place", "played", "reps", "quests", "bags", "bank" }
+-- Who sees each part of a new character, as Share.lua's letters (g guild, f friends, p public): its
+-- guild and friends see everything; switched on, public sees its gear, talents, professions and
+-- character sheet.
+ns.PART_DEFAULT = { gear = "gfp", talents = "gfp", profs = "gfp", stats = "gfp", gold = "gf", place = "gf", played = "gf",
+    reps = "gf", quests = "gf", bags = "gf", bank = "gf" }
+-- Up to 1.7.0 a part nobody had chosen for went to these (the rest to nobody).
+local PART_DEFAULT_BEFORE = { gear = "gfp", talents = "gfp", profs = "gfp", stats = "gfp" }
 
 local pairs, ipairs, type, select, tostring, tonumber, pcall, next = pairs, ipairs, type, select, tostring, tonumber, pcall, next
 local floor, format, time, date, wipe, unpack = math.floor, string.format, time, date, wipe, unpack or table.unpack
@@ -1319,8 +1328,7 @@ local function start()
     db.peers = type(db.peers) == "table" and db.peers or {}
     if (num(db.schema) or 1) < 2 then
         -- Before sharing existed, every recorded character was on its owner's public page, all of
-        -- it, so they stay public and show every part. Guild and friends start off, as everything
-        -- does for a new character.
+        -- it, so they stay public and show every part. Guild and friends start off for them.
         for _, c in pairs(db.chars) do
             if type(c) == "table" and type(c.share) ~= "table" then
                 local parts = {}
@@ -1329,6 +1337,22 @@ local function start()
             end
         end
         if next(db.chars) then db.settings.sharingNews = true end
+    end
+    if db.schema == nil and not next(db.chars) then
+        -- A new install: guildmates get your auction scans and notes of where items come from, as
+        -- they get the rest of what you share. One that had Reliquary before keeps its choice.
+        db.settings.sharePrices = true
+    elseif (num(db.schema) or 1) < 3 then
+        -- Characters from 1.7.0 or earlier keep showing what they showed: each part nobody chose for
+        -- is written down as it was, so the new defaults reach new characters only.
+        for _, c in pairs(db.chars) do
+            if type(c) == "table" and type(c.share) == "table" then
+                c.share.parts = type(c.share.parts) == "table" and c.share.parts or {}
+                for _, part in ipairs(ns.PARTS) do
+                    if type(c.share.parts[part]) ~= "string" then c.share.parts[part] = PART_DEFAULT_BEFORE[part] or "" end
+                end
+            end
+        end
     end
     db.schema = SCHEMA
     local given, second = call(UnitName, "player")
@@ -1366,7 +1390,13 @@ local function start()
     db.chars[charKey] = db.chars[charKey] or {}
     char = db.chars[charKey]
     char.key = charKey
-    if type(char.share) ~= "table" then char.share = { guild = false, friends = false, public = false } end
+    if type(char.share) ~= "table" then
+        -- A new character shares everything with its guild and friends, and nothing with anyone else.
+        local parts = {}
+        for _, part in ipairs(ns.PARTS) do parts[part] = ns.PART_DEFAULT[part] or "" end
+        char.share = { guild = true, friends = true, public = false, at = time(), parts = parts }
+        char.shareNews = true -- Share.lua says so in chat once, after login
+    end
     local version, build, _, iface = call(GetBuildInfo)
     db.meta = { addon = VERSION, client = str(version), build = str(build), interface = num(iface), account = nil,
         names = regionalNames() and "regional" or nil } -- how players are named: "Given Family", or Name-Realm

@@ -112,7 +112,9 @@ SCOPES = {"g": "guild", "f": "friends", "p": "public"}  # how another player sha
 # was taken: a photo of a new place is taken the moment she arrives, so its caption would say where
 # she is now.
 PARTS = ("gear", "talents", "profs", "stats", "gold", "place", "played", "reps", "quests", "bags", "bank")
-PART_DEFAULT = {"gear": "gfp", "talents": "gfp", "profs": "gfp", "stats": "gfp"}  # the rest: nobody
+# A part nobody chose for, in a file saved by 1.7.0 or earlier (the rest: nobody). Since then the addon
+# writes every part of every character down, a new one's to its guild and friends.
+PART_DEFAULT = {"gear": "gfp", "talents": "gfp", "profs": "gfp", "stats": "gfp"}
 PART_FIELDS = {
     "gear": ("gear", "durability"), "talents": ("talents", "legacy"), "profs": ("profs", "skills", "recipes"),
     "stats": ("stats", "health", "healthMax", "power", "powerMax", "powerToken", "mana", "manaMax"),

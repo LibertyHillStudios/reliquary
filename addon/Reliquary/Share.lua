@@ -1,10 +1,12 @@
 -- Reliquary sharing: a character's reliquary can be seen by its guild, its friends or anyone,
--- each switched on separately (/rq share, the Sharing tab of /rq, or Options > AddOns >
--- Reliquary). A new character shares nothing until its player says so.
+-- each switched on and off separately (/rq share, the Sharing tab of /rq, or Options > AddOns >
+-- Reliquary). A new character shares with its guild and friends, and not with anyone else, until
+-- its player says otherwise.
 --
--- What each of them sees is chosen part by part (char.share.parts): gear, talents, professions
--- and the character sheet start on; gold, where you are, time played, reputation, quests, bags
--- and bank start off. Who the character is (name, race, class, level, guild, title) goes with
+-- What each of them sees is chosen part by part (char.share.parts, ns.PART_DEFAULT in
+-- Reliquary.lua): guild and friends start with every part; switched on, public starts with gear,
+-- talents, professions and the character sheet, not gold, where you are, time played, reputation,
+-- quests, bags or bank. Who the character is (name, race, class, level, guild, title) goes with
 -- any of them. Photos never travel. The guild bank goes to the guild only, and a guildmate keeps
 -- only the tabs their own character has been shown at the bank (the game's rank permissions).
 --
@@ -43,7 +45,7 @@ local B62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 local SCOPE_OF = { guild = "g", friends = "f", public = "p" }
 -- The parts of a reliquary a player chooses to show, and to whom (the scopes, as letters).
 local PARTS = ns.PARTS -- Reliquary.lua: gear, talents, profs, stats, gold, place, played, reps, quests, bags, bank
-local PART_DEFAULT = { gear = "gfp", talents = "gfp", profs = "gfp", stats = "gfp" } -- the rest: nobody
+local PART_DEFAULT = ns.PART_DEFAULT -- Reliquary.lua: what a new character shows, and to whom
 local PART_NAMES = {
     gear = "Gear", talents = "Talents", profs = "Professions", stats = "Character sheet", gold = "Gold",
     place = "Where you are", played = "Time played", reps = "Reputation", quests = "Quest log", bags = "Bags", bank = "Bank",
@@ -2143,10 +2145,10 @@ local function registerSettings()
     end
     add("SHARE_GUILD", "Share with my guild",
         "Guildmates who use Reliquary see this character, as you choose under What others see, and the guild bank as you last saw it.",
-        false, function() return shares().guild == true end, function(v) setShare("guild", v) end)
+        true, function() return shares().guild == true end, function(v) setShare("guild", v) end)
     add("SHARE_FRIENDS", "Share with my friends",
         "Friends on your friends list and Battle.net friends playing WoW: Forever see this character, as you choose under What others see.",
-        false, function() return shares().friends == true end, function(v) setShare("friends", v) end)
+        true, function() return shares().friends == true end, function(v) setShare("friends", v) end)
     add("SHARE_PUBLIC", "Share with anyone",
         "Any player who uses Reliquary can ask for this character, for example by targeting you, and sees what you choose under What others see.",
         false, function() return shares().public == true end, function(v) setShare("public", v) end)
@@ -2188,11 +2190,13 @@ on("PLAYER_LOGIN", function()
     end
     if C_Timer then
         C_Timer.After(8, function()
-            if ns.db.settings.sharingNews then
-                ns.db.settings.sharingNews = nil
-                print(ns.TAG .. "You can now share this character with your guild, your friends or everyone, and see what they share with /rq.")
-                print(shareLine() .. " Guild and friends start off. /rq share to choose.")
-            end
+            -- Once: for characters from before sharing, that it exists; for a new character, who it
+            -- shares with.
+            local news, fresh = ns.db.settings.sharingNews, ns.char and ns.char.shareNews
+            ns.db.settings.sharingNews = nil
+            if ns.char then ns.char.shareNews = nil end
+            if news then print(ns.TAG .. "You can now share this character with your guild, your friends or everyone, and see what they share with /rq.") end
+            if news or fresh then print(shareLine() .. ((news and not fresh) and " Guild and friends start off." or "") .. " /rq share to choose.") end
         end)
         C_Timer.After(20, greet)
     end

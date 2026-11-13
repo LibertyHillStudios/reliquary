@@ -184,9 +184,9 @@ ReliquaryDB = {
 					},
 				}, -- [1]
 			},
-			["bankAt"] = 1794371469,
+			["bankAt"] = 1794532581,
 			["before"] = {
-				["at"] = 1794371443,
+				["at"] = 1794532533,
 				["challenges"] = {
 					{
 						["date"] = "2026-11-06",
@@ -761,7 +761,7 @@ ReliquaryDB = {
 			["hearth"] = "Valanaar",
 			["key"] = "Joan Ofârc-CAMWOWUS2Realm11RP",
 			["legacy"] = {
-				["at"] = 1794371444,
+				["at"] = 1794532534,
 				["left"] = 5,
 				["spent"] = 3,
 				["trees"] = {
@@ -829,9 +829,9 @@ ReliquaryDB = {
 					["kind"] = "photo",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_223122",
+					["stamp"] = "111226_191634",
 					["sub"] = "Thendal Grove",
-					["t"] = 1794371482,
+					["t"] = 1794532594,
 					["zone"] = "Zephras Isle",
 				}, -- [1]
 				{
@@ -839,9 +839,9 @@ ReliquaryDB = {
 					["kind"] = "screenshot",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_223124",
+					["stamp"] = "111226_191636",
 					["sub"] = "Thendal Grove",
-					["t"] = 1794371484,
+					["t"] = 1794532596,
 					["zone"] = "Zephras Isle",
 				}, -- [2]
 				{
@@ -866,9 +866,9 @@ ReliquaryDB = {
 					["kind"] = "levelup",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_223211",
+					["stamp"] = "111226_191723",
 					["sub"] = "Thendal Grove",
-					["t"] = 1794371531,
+					["t"] = 1794532643,
 					["zone"] = "Zephras Isle",
 				}, -- [3]
 				{
@@ -891,9 +891,9 @@ ReliquaryDB = {
 					["kind"] = "place",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_223219",
+					["stamp"] = "111226_191731",
 					["sub"] = "Thendal Grove",
-					["t"] = 1794371539,
+					["t"] = 1794532651,
 					["zone"] = "Zephras Isle",
 				}, -- [4]
 				{
@@ -919,9 +919,9 @@ ReliquaryDB = {
 					["kind"] = "portrait",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_223227",
+					["stamp"] = "111226_191739",
 					["sub"] = "Thendal Grove",
-					["t"] = 1794371547,
+					["t"] = 1794532659,
 					["zone"] = "Zephras Isle",
 				}, -- [5]
 				{
@@ -944,9 +944,9 @@ ReliquaryDB = {
 					["kind"] = "place",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_223519",
+					["stamp"] = "111226_192031",
 					["sub"] = "Moonwell Glade",
-					["t"] = 1794371719,
+					["t"] = 1794532831,
 					["zone"] = "Zephras Isle",
 				}, -- [6]
 				{
@@ -969,18 +969,18 @@ ReliquaryDB = {
 					["kind"] = "place",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_224354",
+					["stamp"] = "111226_192906",
 					["sub"] = "Starfall Rest",
-					["t"] = 1794372234,
+					["t"] = 1794533346,
 					["zone"] = "Zephras Isle",
 				}, -- [7]
 				{
 					["kind"] = "place",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_225553",
+					["stamp"] = "111226_194105",
 					["sub"] = "Shrine of the Moon",
-					["t"] = 1794372953,
+					["t"] = 1794534065,
 					["zone"] = "Zephras Isle",
 				}, -- [8]
 				{
@@ -1006,9 +1006,9 @@ ReliquaryDB = {
 					["kind"] = "portrait",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_230407",
+					["stamp"] = "111226_194919",
 					["sub"] = "Elune's Rest",
-					["t"] = 1794373447,
+					["t"] = 1794534559,
 					["zone"] = "Zephras Isle",
 				}, -- [9]
 				{
@@ -1034,41 +1034,41 @@ ReliquaryDB = {
 					["kind"] = "portrait",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_230412",
+					["stamp"] = "111226_194924",
 					["sub"] = "Elune's Rest",
-					["t"] = 1794373452,
+					["t"] = 1794534564,
 					["zone"] = "Zephras Isle",
 				}, -- [10]
 				{
 					["kind"] = "photo",
 					["level"] = 12,
 					["spot"] = "Calmbreeze Inn",
-					["stamp"] = "111026_230421",
+					["stamp"] = "111226_194933",
 					["sub"] = "Elune's Rest",
-					["t"] = 1794373461,
+					["t"] = 1794534573,
 					["zone"] = "Zephras Isle",
 				}, -- [11]
 			},
 			["places"] = {
-				["Auberdine"] = 1794373709,
-				["Calmbreeze Inn"] = 1794371444,
-				["Darkshore"] = 1794373709,
-				["Elune's Rest"] = 1794373046,
-				["Moonwell Glade"] = 1794371637,
-				["Moonwell Pool"] = 1794371827,
-				["Shrine of the Moon"] = 1794372846,
-				["Silverwind Refuge"] = 1794372643,
-				["Starfall Rest"] = 1794372027,
-				["The Great Sea"] = 1794373469,
-				["Thendal Grove"] = 1794371466,
-				["Valanaar"] = 1794371444,
-				["Windward Rise 0"] = 1794372237,
-				["Windward Rise 0.1"] = 1794372440,
-				["Zephras Isle"] = 1794371444,
+				["Auberdine"] = 1794534821,
+				["Calmbreeze Inn"] = 1794532534,
+				["Darkshore"] = 1794534821,
+				["Elune's Rest"] = 1794534158,
+				["Moonwell Glade"] = 1794532749,
+				["Moonwell Pool"] = 1794532939,
+				["Shrine of the Moon"] = 1794533958,
+				["Silverwind Refuge"] = 1794533755,
+				["Starfall Rest"] = 1794533139,
+				["The Great Sea"] = 1794534581,
+				["Thendal Grove"] = 1794532578,
+				["Valanaar"] = 1794532534,
+				["Windward Rise 0"] = 1794533349,
+				["Windward Rise 0.1"] = 1794533552,
+				["Zephras Isle"] = 1794532534,
 			},
-			["played"] = 45017,
-			["playedAt"] = 1794374644,
-			["playedLevel"] = 12317,
+			["played"] = 45039,
+			["playedAt"] = 1794535756,
+			["playedLevel"] = 12339,
 			["power"] = 410,
 			["powerMax"] = 455,
 			["powerToken"] = "MANA",
@@ -1147,7 +1147,7 @@ ReliquaryDB = {
 			["realm"] = "CAMWOWUS2Realm11RP",
 			["recipes"] = {
 				["Alchemy"] = {
-					["at"] = 1794371478,
+					["at"] = 1794532590,
 					["cats"] = {
 						[1001] = "Potions",
 					},
@@ -1215,7 +1215,7 @@ ReliquaryDB = {
 					["sk"] = 41,
 				},
 				["Cooking"] = {
-					["at"] = 1794371474,
+					["at"] = 1794532586,
 					["cats"] = {
 						[1101] = "Meat",
 						[1102] = "Eggs",
@@ -1317,7 +1317,7 @@ ReliquaryDB = {
 			["ruleset"] = "rppvp",
 			["sex"] = 3,
 			["share"] = {
-				["at"] = 1794374644,
+				["at"] = 1794535756,
 				["friends"] = false,
 				["guild"] = true,
 				["parts"] = {
@@ -1415,7 +1415,7 @@ ReliquaryDB = {
 			["subzone"] = "Auberdine",
 			["surname"] = "Ofârc",
 			["talents"] = {
-				["at"] = 1794373046,
+				["at"] = 1794534158,
 				["nodes"] = {
 					{
 						["desc"] = "Rank description for Improved Wrath.",
@@ -1951,8 +1951,8 @@ ReliquaryDB = {
 				},
 				["entries"] = {
 					{
-						["active"] = 2024,
-						["from"] = 1794371443,
+						["active"] = 2046,
+						["from"] = 1794532533,
 						["kills"] = 3,
 						["level"] = 12,
 						["levelTo"] = 14,
@@ -1963,12 +1963,12 @@ ReliquaryDB = {
 								["xp"] = 850,
 							}, -- [1]
 						},
-						["to"] = 1794373467,
+						["to"] = 1794534579,
 						["zone"] = "Zephras Isle",
 					}, -- [1]
 					{
 						["active"] = 1177,
-						["from"] = 1794373467,
+						["from"] = 1794534579,
 						["kills"] = 2,
 						["level"] = 12,
 						["levelTo"] = 12,
@@ -1982,15 +1982,15 @@ ReliquaryDB = {
 								["xp"] = 1100,
 							}, -- [1]
 						},
-						["to"] = 1794374644,
+						["to"] = 1794535756,
 						["zone"] = "Darkshore",
 					}, -- [2]
 				},
 				["pending"] = {
 				},
-				["seen"] = 1794374644,
+				["seen"] = 1794535756,
 			},
-			["updated"] = 1794374644,
+			["updated"] = 1794535756,
 			["x"] = 46.1,
 			["xp"] = 3890,
 			["xpMax"] = 8800,
@@ -2668,7 +2668,7 @@ ReliquaryDB = {
 			},
 			["mine"] = {
 				["Joan Ofârc-CAMWOWUS2Realm11RP"] = {
-					["at"] = 1794374644,
+					["at"] = 1794535756,
 					["rank"] = "Officer",
 					["ro"] = 2,
 				},
@@ -2781,7 +2781,7 @@ ReliquaryDB = {
 	},
 	["items"] = {
 		[118] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134831,
@@ -2807,7 +2807,7 @@ ReliquaryDB = {
 			},
 		},
 		[159] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 132791,
@@ -2833,7 +2833,7 @@ ReliquaryDB = {
 			},
 		},
 		[765] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134190,
@@ -2855,7 +2855,7 @@ ReliquaryDB = {
 			},
 		},
 		[769] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133944,
@@ -2900,7 +2900,7 @@ ReliquaryDB = {
 			},
 		},
 		[785] = {
-			["at"] = 1794371472,
+			["at"] = 1794532584,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133939,
@@ -2922,7 +2922,7 @@ ReliquaryDB = {
 			},
 		},
 		[858] = {
-			["at"] = 1794371478,
+			["at"] = 1794532590,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134830,
@@ -3053,7 +3053,7 @@ ReliquaryDB = {
 			},
 		},
 		[2318] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134252,
@@ -3121,7 +3121,7 @@ ReliquaryDB = {
 			},
 		},
 		[2447] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134191,
@@ -3143,7 +3143,7 @@ ReliquaryDB = {
 			},
 		},
 		[2450] = {
-			["at"] = 1794371478,
+			["at"] = 1794532590,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134412,
@@ -3165,7 +3165,7 @@ ReliquaryDB = {
 			},
 		},
 		[2455] = {
-			["at"] = 1794371472,
+			["at"] = 1794532584,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134850,
@@ -3214,7 +3214,7 @@ ReliquaryDB = {
 			},
 		},
 		[2589] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 132889,
@@ -3290,7 +3290,7 @@ ReliquaryDB = {
 			},
 		},
 		[2672] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133970,
@@ -3312,7 +3312,7 @@ ReliquaryDB = {
 			},
 		},
 		[2678] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134058,
@@ -3334,7 +3334,7 @@ ReliquaryDB = {
 			},
 		},
 		[2679] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133951,
@@ -3360,7 +3360,7 @@ ReliquaryDB = {
 			},
 		},
 		[2681] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133946,
@@ -3598,7 +3598,7 @@ ReliquaryDB = {
 			},
 		},
 		[3371] = {
-			["at"] = 1794371472,
+			["at"] = 1794532584,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 132793,
@@ -3721,7 +3721,7 @@ ReliquaryDB = {
 			},
 		},
 		[4293] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 9,
 				["icon"] = 134939,
@@ -3774,7 +3774,7 @@ ReliquaryDB = {
 			},
 		},
 		[4540] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133964,
@@ -4002,7 +4002,7 @@ ReliquaryDB = {
 			},
 		},
 		[6888] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133948,
@@ -4028,7 +4028,7 @@ ReliquaryDB = {
 			},
 		},
 		[6889] = {
-			["at"] = 1794371474,
+			["at"] = 1794532586,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 132832,
@@ -4215,7 +4215,7 @@ ReliquaryDB = {
 			},
 		},
 		[264120] = {
-			["at"] = 1794374433,
+			["at"] = 1794535545,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133117,
@@ -4321,7 +4321,7 @@ ReliquaryDB = {
 			},
 		},
 		[264170] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134939,
@@ -4347,7 +4347,7 @@ ReliquaryDB = {
 			},
 		},
 		[264171] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134123,
@@ -4369,7 +4369,7 @@ ReliquaryDB = {
 			},
 		},
 		[264172] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 134414,
@@ -4391,7 +4391,7 @@ ReliquaryDB = {
 			},
 		},
 		[264173] = {
-			["at"] = 1794371444,
+			["at"] = 1794532534,
 			["info"] = {
 				["cls"] = 7,
 				["icon"] = 133741,
@@ -6146,17 +6146,17 @@ ReliquaryDB = {
 		},
 	},
 	["meta"] = {
-		["addon"] = "1.7.0",
+		["addon"] = "1.8.0",
 		["build"] = "70412",
 		["client"] = "1.60.1",
 		["interface"] = 16001,
 		["names"] = "regional",
-		["savedAt"] = 1794374644,
+		["savedAt"] = 1794535756,
 	},
 	["peers"] = {
 		["Brannoc Stonebrow"] = {
 			["card"] = {
-				["addon"] = "1.7.0",
+				["addon"] = "1.8.0",
 				["cid"] = 1,
 				["class"] = "Warrior",
 				["classFile"] = "WARRIOR",
@@ -6380,7 +6380,7 @@ ReliquaryDB = {
 				["craft"] = 1794454935,
 			},
 			["hashes"] = {
-				["core"] = "0ca56c39",
+				["core"] = "26580dba",
 				["craft"] = "12a77eac",
 			},
 			["key"] = "Brannoc Stonebrow",
@@ -6456,12 +6456,12 @@ ReliquaryDB = {
 				["core"] = "f",
 				["craft"] = "f",
 			},
-			["ver"] = "1.7.0",
+			["ver"] = "1.8.0",
 			["via"] = "BN",
 		},
 		["Eluned Dawnstride"] = {
 			["card"] = {
-				["addon"] = "1.7.0",
+				["addon"] = "1.8.0",
 				["cid"] = 3,
 				["class"] = "Hunter",
 				["classFile"] = "HUNTER",
@@ -6669,7 +6669,7 @@ ReliquaryDB = {
 				["live"] = 1794002423,
 			},
 			["hashes"] = {
-				["core"] = "81c3c04e",
+				["core"] = "99b0bfaf",
 				["live"] = "fe609f0b",
 			},
 			["key"] = "Eluned Dawnstride",
@@ -6687,12 +6687,12 @@ ReliquaryDB = {
 				["core"] = "p",
 				["live"] = "p",
 			},
-			["ver"] = "1.7.0",
+			["ver"] = "1.8.0",
 			["via"] = "WHISPER",
 		},
 		["Faelwen Duskleaf"] = {
 			["card"] = {
-				["addon"] = "1.7.0",
+				["addon"] = "1.8.0",
 				["cid"] = 11,
 				["class"] = "Druid",
 				["classFile"] = "DRUID",
@@ -6762,7 +6762,7 @@ ReliquaryDB = {
 				["fits"] = 1794455301,
 			},
 			["hashes"] = {
-				["core"] = "9f79d0b0",
+				["core"] = "bfd90291",
 				["craft"] = "e006abcc",
 				["fits"] = "e3786e0d",
 			},
@@ -6906,12 +6906,12 @@ ReliquaryDB = {
 				["craft"] = "g",
 				["fits"] = "g",
 			},
-			["ver"] = "1.7.0",
+			["ver"] = "1.8.0",
 			["via"] = "GUILD",
 		},
 		["Thalia Moonwhisper"] = {
 			["card"] = {
-				["addon"] = "1.7.0",
+				["addon"] = "1.8.0",
 				["cid"] = 5,
 				["class"] = "Priest",
 				["classFile"] = "PRIEST",
@@ -7166,7 +7166,7 @@ ReliquaryDB = {
 				["reps"] = 1794001749,
 			},
 			["hashes"] = {
-				["core"] = "ddcff35a",
+				["core"] = "4867999b",
 				["craft"] = "ccf265ba",
 				["fits"] = "cb81366d",
 				["live"] = "04f41fda",
@@ -7330,7 +7330,7 @@ ReliquaryDB = {
 				["quests"] = "g",
 				["reps"] = "g",
 			},
-			["ver"] = "1.7.0",
+			["ver"] = "1.8.0",
 			["via"] = "GUILD",
 		},
 	},
@@ -7372,15 +7372,16 @@ ReliquaryDB = {
 			["own"] = true,
 		},
 	},
-	["schema"] = 2,
+	["schema"] = 3,
 	["settings"] = {
 		["autoPhoto"] = true,
 		["motion"] = false,
+		["sharePrices"] = true,
 		["window"] = {
 			"TOPLEFT", -- [1]
 			"BOTTOMLEFT", -- [2]
-			120, -- [3]
-			1000, -- [4]
+			0, -- [3]
+			1080, -- [4]
 		},
 		["windowScale"] = 1,
 	},
@@ -7638,23 +7639,23 @@ ReliquaryDB = {
 	},
 	["whispers"] = {
 		["Thalia Moonwhisper"] = {
-			["at"] = 1794374644,
+			["at"] = 1794535756,
 			["list"] = {
 				{
 					["m"] = "Meet me at the moonwell",
-					["t"] = 1794374644,
+					["t"] = 1794535756,
 					["w"] = "Joan Ofârc",
 				}, -- [1]
 			},
 		},
 		["bn:Brannoc#1504"] = {
-			["at"] = 1794374644,
+			["at"] = 1794535756,
 			["c"] = "WARRIOR",
 			["list"] = {
 				{
 					["c"] = "WARRIOR",
 					["m"] = "Ready when you are",
-					["t"] = 1794374644,
+					["t"] = 1794535756,
 					["w"] = "Joan Ofârc",
 				}, -- [1]
 			},

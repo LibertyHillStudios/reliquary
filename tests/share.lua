@@ -1227,9 +1227,11 @@ thalia.subzone = "Craftsmen's Terrace"
 
 for _, c in ipairs(world.clients) do login(c) end
 -- Joan's older character kept its place on her public page; this new one (Joan on another realm)
--- shares nothing, like every new character.
+-- shares everything with its guild and friends and nothing with anyone else, like every new
+-- character. Thalia's, from 1.7.0, keeps what it showed: nothing, and had she switched one on, her
+-- gear, talents, professions and character sheet.
 local db = joan.db()
-check(db.schema == 2, "schema not raised")
+check(db.schema == 3, "schema not raised")
 check(db.chars["Joan-CAMWOW US2 Realm 10 RP PvP"].share.public == true, "a character from before sharing must stay public")
 check(db.chars["Joan-CAMWOW US2 Realm 10 RP PvP"].share.guild == false, "guild sharing must start off")
 local me = db.chars[ownKey(joan)]
@@ -1246,7 +1248,14 @@ if REGIONAL then
 else
     check(tdb.chars[ownKey(thalia)] == oldThalia and not oldThalia.was, "with names by realm, Thalia's record moved")
 end
-check(me.share.guild == false and me.share.friends == false and me.share.public == false, "a new character must share nothing")
+check(me.share.guild == true and me.share.friends == true and me.share.public == false, "a new character must share with its guild and friends only")
+check(me.share.parts.gold == "gf" and me.share.parts.bags == "gf" and me.share.parts.bank == "gf" and me.share.parts.gear == "gfp",
+    "a new character's guild and friends must see every part of it")
+check(oldThalia.share.guild == false and oldThalia.share.friends == false and oldThalia.share.public == false and oldThalia.share.parts and oldThalia.share.parts.gear == "gfp"
+    and oldThalia.share.parts.stats == "gfp" and oldThalia.share.parts.gold == "" and oldThalia.share.parts.bags == "" and oldThalia.share.parts.place == "",
+    "a character from 1.7.0 or earlier changed what it shows")
+check(db.settings.sharePrices == nil and tdb.settings.sharePrices == nil and kael.db().settings.sharePrices == true,
+    "sharing prices starts on for a new install only")
 advance(9)
 if REGIONAL then
     -- A record kept by name and realm that its class, race or family name says is another of yours
@@ -1264,7 +1273,21 @@ if REGIONAL then
         "Faelwen's record was replaced by the one kept under her name and realm")
 end
 check(table.concat(joan.printed, "\n"):find("You can now share this character", 1, true), "the one-time sharing news wasn't printed")
-check(db.settings.sharingNews == nil, "the sharing news would print again")
+check(table.concat(joan.printed, "\n"):find("shares with: guild |cff5fb87aon|r, friends |cff5fb87aon|r, public |cff8b7e6doff|r. /rq share to choose.", 1, true),
+    "a new character's sharing wasn't said in chat")
+check(db.settings.sharingNews == nil and me.shareNews == nil, "the sharing news would print again")
+check(not table.concat(thalia.printed, "\n"):find("shares with:", 1, true), "a character from 1.7.0 or earlier was told who it shares with")
+
+-- The players of this world choose before the hellos go out, each new character starting from
+-- nothing: only what they switch on below, and of each only its gear, talents, professions and
+-- character sheet unless they show more. A new install's player turns sharing prices off too, as
+-- the Sharing tab does.
+for _, c in ipairs({ joan, mira, brannoc, eluned, kael, rogue, not REGIONAL and faelwen or nil }) do -- Faelwen: by realm, her record is new
+    if c.db().settings.sharePrices == true then c.db().settings.sharePrices = false end
+    c.slash("share off")
+    for _, part in ipairs({ "gold", "place", "played", "reps", "quests", "bags", "bank" }) do c.slash("share " .. part .. " off") end
+end
+check(me.share.guild == false and me.share.friends == false and me.share.parts.gold == "" and me.share.parts.gear == "gfp", "/rq share off and /rq share gold off")
 
 -- Each player chooses before the hellos go out.
 joan.slash("share guild on")
@@ -1459,7 +1482,7 @@ check(not peer(joan, "Thalia") and not peer(mira, "Thalia"), "Thalia stopped sha
 local function parts(c) return c.db().chars[ownKey(c)].share.parts end
 check(db.chars["Joan-CAMWOW US2 Realm 10 RP PvP"].share.parts.gold == "gfp" and db.chars["Joan-CAMWOW US2 Realm 10 RP PvP"].share.parts.bank == "gfp",
     "a character from before sharing must keep showing every part, as its public page did")
-check(parts(thalia) == nil, "a new character's parts must be the defaults, not written down")
+check(parts(thalia).gear == "gfp" and parts(thalia).gold == "" and parts(thalia).bank == "", "Thalia's parts must be what 1.7.0 showed, written down")
 local tj = peer(thalia, "Joan")
 -- What else a guildmate holds of someone: only what goes with their gear (what they would wear).
 local function onlyFits(m) for k in pairs(m or {}) do if k ~= "fits" then return false end end return true end
@@ -1468,7 +1491,7 @@ check(tj.card.gear and tj.card.tal and tj.card.profs and tj.card.stats and onlyF
 -- reputation; never her gold.
 thalia.slash("share guild on")
 for _, cmd in ipairs({ "share bags guild on", "share place guild on", "share quests guild on", "share reps guild on" }) do thalia.slash(cmd) end
-check(parts(thalia).bags == "g" and not parts(thalia).gold,
+check(parts(thalia).bags == "g" and parts(thalia).gold == "",
     "/rq share bags guild on")
 advance(30)
 local tm = peer(joan, "Thalia").more

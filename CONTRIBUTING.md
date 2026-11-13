@@ -11,8 +11,8 @@ of Reliquary you have, what happened, and any error the game showed.
 ## Pull requests
 
 - Run `tools/test.sh` before you send one.
-- Reliquary never acts in the game for the player, and shares nothing the player hasn't chosen to
-  share. Changes need to keep it that way.
+- Reliquary never acts in the game for the player, shares nothing publicly unless the player turns
+  it on, and stops sending a part the player turns off. Changes need to keep it that way.
 
 Accepted changes are released with the next version.
 

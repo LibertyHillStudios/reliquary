@@ -910,11 +910,23 @@ advance(60)
 
 IsMacClient = function() return true end -- the copy key the item page names (Cmd+C on a Mac)
 -- 15. /rq opens the window, every tab draws, and the Sharing tab's boxes are this character's own
--- switches. A character that shares nothing, with no guild and no friends online, sends nothing.
+-- switches. A new character shares everything with its guild and friends and nothing with anyone
+-- else, and says so once in chat; with no guild and no friends online it sends nothing.
 do
     local me = ReliquaryDB.chars["Joan Ofârc-CAMWOWUS2Realm11RP"] or ReliquaryDB.chars["Unknown-CAMWOWUS2Realm11RP"]
-    assert(type(me.share) == "table" and me.share.guild == false and me.share.friends == false and me.share.public == false, "a new character must share nothing")
-    assert(ReliquaryDB.schema == 2 and ReliquaryDB.meta.addon == tocVersion, "version " .. tostring(ReliquaryDB.meta.addon) .. " is not the TOC's " .. tostring(tocVersion))
+    assert(type(me.share) == "table" and me.share.guild == true and me.share.friends == true and me.share.public == false,
+        "a new character must share with its guild and friends, and not publicly")
+    for _, part in ipairs({ "gear", "talents", "profs", "stats", "gold", "place", "played", "reps", "quests", "bags", "bank" }) do
+        local public = part == "gear" or part == "talents" or part == "profs" or part == "stats"
+        assert(me.share.parts[part] == (public and "gfp" or "gf"), "a new character's " .. part .. ": " .. tostring(me.share.parts[part]))
+    end
+    assert(ReliquaryDB.settings.sharePrices == true, "a new install doesn't share prices with the guild")
+    local told = 0
+    for _, line in ipairs(printed) do
+        if line:find("shares with: guild |cff5fb87aon|r, friends |cff5fb87aon|r, public |cff8b7e6doff|r. /rq share to choose.", 1, true) then told = told + 1 end
+    end
+    assert(told == 1 and me.shareNews == nil, "a new character's sharing was said " .. told .. " times in chat")
+    assert(ReliquaryDB.schema == 3 and ReliquaryDB.meta.addon == tocVersion, "version " .. tostring(ReliquaryDB.meta.addon) .. " is not the TOC's " .. tostring(tocVersion))
     assert(ReliquaryDB.meta.names == "regional" and me.surname == (not secrets and "Ofârc" or nil), "Forever's names: the family name and how players are named")
     SlashCmdList.RELIQUARY("")
     local win = ReliquaryFrame
@@ -953,11 +965,11 @@ do
     assert(not win:IsShown(), "/rq again didn't close the window")
     -- Opening, each tab, the switch ticked on, closing: each with the game's own sound.
     assert(table.concat(played, ",") == "839," .. ("841,"):rep(open) .. "856,840", "the window's sounds: " .. table.concat(played, ","))
-    assert(#sent == 0, "a character sharing nothing sent " .. #sent .. " messages")
+    assert(#sent == 0, "a character with no guild and no friends online sent " .. #sent .. " messages")
 end
 
 -- 15b. The window's Characters tab: every character on the account, the one played now first, each
--- with every part of it whatever it shares (Joan shares nothing), its timeline with each stop's
+-- with every part of it whatever it shares, its timeline with each stop's
 -- details a click away, its recipes, and its bags in full however many items they hold. Nothing in
 -- the window points anywhere outside the game.
 do

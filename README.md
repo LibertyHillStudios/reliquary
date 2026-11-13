@@ -49,9 +49,9 @@ World of Warcraft doesn't let addons connect to the internet: an addon can only 
 game. Reliquary has no server and sends nothing to Liberty Hill Studios.
 
 - What it records stays on your computer, in the file the game saves for each addon.
-- Sharing is off until you turn it on, character by character, and only the parts you tick go to
-  the players you chose, through the game's own addon messages. Turn a part off and those who had
-  it are told to forget it.
+- A new character shares with your guild and friends, and with nobody else until you turn it on;
+  each character chooses for itself. Only the parts ticked go to those players, through the game's
+  own addon messages. Turn a part or a switch off and those who had it are told to forget it.
 - Guild chat, officer chat and whispers are never sent anywhere.
 - It never presses a key or acts in the game. The only thing it sends is a chat line you type and
   press Enter on.

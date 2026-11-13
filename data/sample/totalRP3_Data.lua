@@ -71,7 +71,7 @@ TRP3_Register = {
 			["misc"] = {
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 		["CorvaneBlackthorn"] = {
@@ -97,7 +97,7 @@ TRP3_Register = {
 			["misc"] = {
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 		["ElunedDawnstride"] = {
@@ -146,7 +146,7 @@ TRP3_Register = {
 				},
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 		["FaelwenDuskleaf"] = {
@@ -173,7 +173,7 @@ TRP3_Register = {
 			["misc"] = {
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 		["GarrickHolloway"] = {
@@ -198,7 +198,7 @@ TRP3_Register = {
 			["misc"] = {
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 		["ThaliaMoonwhisper"] = {
@@ -292,7 +292,7 @@ TRP3_Register = {
 				},
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 		["VessaThornbrook"] = {
@@ -319,7 +319,7 @@ TRP3_Register = {
 			["misc"] = {
 				["v"] = 1,
 			},
-			["time"] = 1794371044,
+			["time"] = 1794532156,
 			["zone"] = "Darkshore",
 		},
 	},
