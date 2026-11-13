@@ -23,7 +23,8 @@ whose recipes use it, what it sells for and where it comes from.
 
 Reliquary is made by [Liberty Hill Studios](https://libertyhillstudio.com), an independent game
 studio in the Texas Hill Country, building its games in the open with the testers, artists and
-players who help make them.
+players who help make them. Anyone can apply to be a tester: make an account at
+[libertyhillstudio.com/signup](https://libertyhillstudio.com/signup) and apply for a seat on the crew.
 
 <p align="center"><img src="docs/dashboard.png" alt="A character's page on the dashboard: portrait, level, stats and equipment" width="100%"></p>
 
