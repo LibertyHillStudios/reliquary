@@ -38,6 +38,12 @@ if ! pgrep -x Wow.exe >/dev/null; then
   diff <(cd addon/Reliquary && find . -type f | sort) <(cd "$out/AddOns/Reliquary" && find . -type f | sort)
   echo "install ok: $(find "$out/AddOns/Reliquary" -type f | wc -l) files"
 fi
+# A test build's layout (tools/playtest.sh, what the studio's launcher puts in a tester's game for a
+# playtest) holds exactly the files a release's zip holds.
+tools/playtest.sh "$out/playtest" >/dev/null
+diff <(tools/addon-files.sh) <(cd "$out/playtest/Reliquary" && find . -type f | sed 's|^\./||' | sort)
+cmp addon/Reliquary/Reliquary.toc "$out/playtest/Reliquary/Reliquary.toc"
+echo "playtest ok: $(find "$out/playtest/Reliquary" -type f | wc -l) files, as a release holds them"
 # The server's tests keep their price files here, never beside the real ones.
 export XDG_STATE_HOME="$out/state"
 nice python3 tests/test_photos.py "$out/full.lua"

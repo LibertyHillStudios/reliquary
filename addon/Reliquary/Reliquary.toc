@@ -2,7 +2,7 @@
 ## Title: Reliquary
 ## Notes: Keeps a record of every character you play and takes their photo as they travel. Share it with your guild, friends or anyone, and see theirs, your guild bank, every recipe, and for each item who it would help, who can make or use it and what it costs: /rq
 ## Author: Liberty Hill Studios
-## Version: 1.8.0
+## Version: 1.8.1
 ## Category: Inventory
 ## IconTexture: Interface\AddOns\Reliquary\Media\icon
 ## AddonCompartmentFunc: Reliquary_OnAddonCompartmentClick

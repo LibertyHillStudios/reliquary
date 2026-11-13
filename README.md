@@ -89,7 +89,8 @@ players sharing through a simulated server, the timeline, and the server's tests
 (`lua5.1`, `luac5.1`), LuaJIT, Python 3 and Node.js.
 
 `tools/install-addon.sh` copies the addon into the game (set `WOW_FOREVER` if the game isn't in
-`/mnt/games/wow-forever`), and `tools/package.sh` builds the CurseForge zip.
+`/mnt/games/wow-forever`), `tools/package.sh` builds the CurseForge zip, and `tools/playtest.sh <dir>`
+lays out a test build of the working tree, the same files the zip holds (`tools/addon-files.sh` lists them).
 
 Before calling a game function from the addon, check that it exists and isn't protected on Forever,
 in Blizzard's own code for the build: the `forever` branch of

@@ -27,8 +27,7 @@ env -u CF_API_KEY -u GITHUB_OAUTH -u WOWI_API_TOKEN -u WAGO_API_TOKEN \
 rm -f .release.log
 zip=$(ls .release/*.zip)
 files=$(unzip -Z1 "$zip" | grep -v '/$' | sort)
-expected=$(printf '%s\n' Reliquary/CHANGELOG.md Reliquary/LICENSE Reliquary/NOTICE $(cd addon/Reliquary && find Media -type f | sed 's|^|Reliquary/|') \
-  $(sed -n 's/^\([A-Za-z_]*\.lua\)$/Reliquary\/\1/p' addon/Reliquary/Reliquary.toc) Reliquary/Reliquary.toc | sort)
+expected=$(tools/addon-files.sh | sed 's|^|Reliquary/|' | sort)
 if [ "$files" != "$expected" ]; then
   echo "The zip doesn't hold exactly the addon:" >&2
   diff <(echo "$expected") <(echo "$files") >&2 || true

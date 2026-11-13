@@ -350,7 +350,7 @@ local function buildSharing(panel)
     contact.email = Skin.field(contact)
     contact.email:SetPoint("BOTTOMLEFT")
     contact.email:SetPoint("RIGHT")
-    local address = "suggestions@libertyhillstudio.com"
+    local address = "support@libertyhillstudio.com"
     contact.email:SetText(address)
     contact.email:HookScript("OnEditFocusGained", function(self) self:HighlightText() end)
     contact.email:SetScript("OnTextChanged", function(self, user)
