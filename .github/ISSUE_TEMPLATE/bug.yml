@@ -1,0 +1,30 @@
+name: Bug report
+description: Something in Reliquary doesn't work as it should.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Reliquary version
+      description: "The CurseForge app shows it, as does the `## Version:` line of Reliquary.toc."
+      placeholder: "1.7.2"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Lua error
+      description: "If the game showed one, paste it here. The game also writes them to _forever_/Logs/General.log."
+      render: text
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Other addons you use, screenshots, or anything that helps us see it.

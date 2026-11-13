@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- A soft round glow, tinted in the game: a bar's bright leading edge, the light on the window's
+       corners, the moon breathing. White, fading smoothly to nothing at its rim. -->
+  <defs>
+    <radialGradient id="g" cx="32" cy="32" r="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.2" stop-color="#fff" stop-opacity="0.78"/>
+      <stop offset="0.4" stop-color="#fff" stop-opacity="0.46"/>
+      <stop offset="0.6" stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="0.8" stop-color="#fff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" fill="url(#g)"/>
+</svg>

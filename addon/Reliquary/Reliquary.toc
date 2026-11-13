@@ -1,0 +1,42 @@
+## Interface: 16001
+## Title: Reliquary
+## Notes: Keeps a record of every character you play and takes their photo as they travel. Share it with your guild, friends or anyone, and see theirs, your guild bank, every recipe, and for each item who it would help, who can make or use it and what it costs: /rq
+## Author: Liberty Hill Studios
+## Version: 1.7.3
+## Category: Inventory
+## IconTexture: Interface\AddOns\Reliquary\Media\icon
+## AddonCompartmentFunc: Reliquary_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: Reliquary_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: Reliquary_OnAddonCompartmentLeave
+## SavedVariables: ReliquaryDB, ReliquaryBlizzard
+## OptionalDeps: totalRP3
+## X-License: Apache-2.0
+## X-Website: https://github.com/LibertyHillStudios/reliquary
+## X-Curse-Project-ID: 1794570
+
+Reliquary.lua
+Timeline.lua
+History.lua
+Share.lua
+Roleplay.lua
+Upgrades.lua
+Prices.lua
+Sources.lua
+Crafting.lua
+Chat.lua
+Motion.lua
+Skin.lua
+ViewerParts.lua
+ViewerTimeline.lua
+ViewerChat.lua
+ViewerTalents.lua
+ViewerBags.lua
+ViewerJournal.lua
+ViewerRecipes.lua
+ViewerDetail.lua
+ViewerLists.lua
+ViewerBank.lua
+ViewerSharing.lua
+ViewerItem.lua
+Viewer.lua
+Minimap.lua

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- An item slot's mask: a square with rounded corners, a tenth of its side (4 units on a 40-unit
+       slot), so an icon sits in the same shape as the slot's frame around it. -->
+  <rect width="128" height="128" rx="12.8" fill="#fff"/>
+</svg>

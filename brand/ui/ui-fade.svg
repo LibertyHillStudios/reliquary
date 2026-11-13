@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="64" viewBox="0 0 16 64">
+  <!-- A fade, tinted in the game: whole at the top, nothing at the bottom, along a smooth curve rather
+       than a straight ramp, so its end never shows. Turned by its texture coordinates for the other
+       sides: the hero's foot, the vignette at the window's edges, a list's end. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.1" stop-color="#fff" stop-opacity="0.97"/>
+      <stop offset="0.25" stop-color="#fff" stop-opacity="0.84"/>
+      <stop offset="0.4" stop-color="#fff" stop-opacity="0.65"/>
+      <stop offset="0.55" stop-color="#fff" stop-opacity="0.43"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="0.23"/>
+      <stop offset="0.85" stop-color="#fff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="16" height="64" fill="url(#g)"/>
+</svg>

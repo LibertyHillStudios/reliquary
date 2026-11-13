@@ -1,0 +1,29 @@
+# CurseForge packaging (BigWigs' packager, run by .github/workflows/release.yml on a version tag,
+# and by tools/package.sh to build the same zip locally). The addon lives in addon/Reliquary; the
+# rest of this repository (the dashboard, its server, tests and tools) never goes to players.
+package-as: Reliquary
+
+move-folders:
+  Reliquary/addon/Reliquary: Reliquary
+
+# Total RP 3 is optional: with it, the /rq window shows roleplay profiles (Roleplay.lua).
+optional-dependencies:
+  - total-rp-3
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+ignore:
+  - .github
+  - art-src
+  - brand
+  - data
+  - docs
+  - server
+  - tests
+  - tools
+  - web
+  - CONTRIBUTING.md
+  - README.md
+  - SECURITY.md

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- The window's shadow, nine-sliced around it: the soft shadow of a rounded rectangle (corner 8)
+       reaching 24 units past its edge. Two pixels a unit, as a blur needs no more; each corner piece
+       is 64 pixels (32 units), the sides are read from the middle. -->
+  <defs>
+    <filter id="soft" filterUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="160" height="160" rx="16" fill="#000" fill-opacity="0.62" filter="url(#soft)"/>
+</svg>

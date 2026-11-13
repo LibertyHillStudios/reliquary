@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- An item slot's soft outer glow, nine-sliced around it and tinted with the item's quality: the
+       blur of a rounded square (corner 4) reaching 8 units out. Four pixels a unit; each corner piece
+       is 48 pixels (12 units), the sides are read from the middle. -->
+  <defs>
+    <filter id="soft" filterUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect x="32" y="32" width="64" height="64" rx="16" fill="#fff" filter="url(#soft)"/>
+</svg>

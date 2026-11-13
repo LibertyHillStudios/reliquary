@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- A white disc, tinted in the game: nine-sliced it is every rounded corner, pill, knob and dot
+       of the window, at any radius (Skin.lua picks the size nearest what the screen draws). -->
+  <circle cx="64" cy="64" r="64" fill="#fff"/>
+</svg>

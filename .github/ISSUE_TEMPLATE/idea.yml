@@ -1,0 +1,11 @@
+name: Idea
+description: Something Reliquary could do.
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What you'd like Reliquary to do, and when you'd use it.
+    validations:
+      required: true

@@ -1,0 +1,32 @@
+Reliquary
+Copyright 2026 Liberty Hill Studios, LLC
+https://libertyhillstudio.com
+
+Reliquary is made by Liberty Hill Studios, an independent game studio in the Texas Hill Country,
+and is licensed under the Apache License, Version 2.0 (see LICENSE). Anyone who passes on this
+work, changed or not, passes this NOTICE on with it, as section 4(d) of the License requires.
+
+Names and marks
+
+"Liberty Hill Studios", the Liberty Hill Studios shield, "Reliquary" and the Reliquary logo are
+marks of Liberty Hill Studios, LLC. As section 6 of the License says, it gives no permission to use
+them, except to say where this work came from. A version you change and pass on goes by its own
+name and icon.
+
+The files that draw those marks are not licensed under the Apache License; all rights reserved:
+
+  brand/logo.svg, brand/logo-512.png, brand/portrait.svg, brand/banner.html, brand/banner.png
+  brand/social-preview.html, brand/social-preview.png
+  addon/Reliquary/Media/icon.tga, addon/Reliquary/Media/portrait-*.tga
+  web/art/icon-*.png, web/art/lhs-mark.svg
+
+Other people's work in this repository
+
+- Cinzel (addon/Reliquary/Media), SIL Open Font License 1.1: see addon/Reliquary/Media/OFL.txt.
+- Cinzel, EB Garamond, Inter, JetBrains Mono and Sora (web/fonts), SIL Open Font License 1.1:
+  see web/fonts/OFL.txt.
+- data/icons.json maps the game's icon file IDs to their names, built by tools/build_icons.py from
+  the community listfile (https://github.com/wowdev/wow-listfile).
+
+World of Warcraft and Warcraft are trademarks of Blizzard Entertainment, Inc. Reliquary is not
+made, sponsored or endorsed by Blizzard Entertainment.

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- A well's inner shadow, nine-sliced over its floor: dark along the inside of a rounded rectangle
+       (corner 4), deepest under the top edge as if lit from above, clear in the middle. Four pixels a
+       unit; each corner piece is 32 pixels (8 units), the sides are read from the middle. -->
+  <defs>
+    <clipPath id="inside"><rect width="128" height="128" rx="16"/></clipPath>
+    <filter id="soft" filterUnits="userSpaceOnUse" x="-32" y="-32" width="192" height="192">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+  <g clip-path="url(#inside)">
+    <rect x="-6" y="-2" width="140" height="138" rx="20" fill="none" stroke="#000" stroke-opacity="0.75" stroke-width="20" filter="url(#soft)"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- A mask with a round hole: white everywhere but a disc of radius 56 in the middle, so what it
+       masks shows only outside that disc (the crest's gold ring round the portrait). The 8 pixels of
+       white round the hole keep the edge of the mask whole however its edges are clamped. -->
+  <path fill="#fff" fill-rule="evenodd" d="M0 0H128V128H0Z M64 8A56 56 0 1 0 64 120A56 56 0 1 0 64 8Z"/>
+</svg>

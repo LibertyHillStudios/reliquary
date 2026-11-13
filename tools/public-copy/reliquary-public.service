@@ -1,0 +1,18 @@
+# The public copy of Reliquary: https://reliquary.libertyhillstudio.com/ (lhs-host route to 127.0.0.1:27635).
+# A user unit on the machine that serves it, installed by tools/publish.py --install from the PC that
+# plays, which also keeps ~/hosting/reliquary/{app,data} up to date (reliquary-publish.service there).
+[Unit]
+Description=Reliquary public copy (reliquary.libertyhillstudio.com, 127.0.0.1:27635)
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 %h/hosting/reliquary/app/server/reliquary.py --public --host 127.0.0.1 --port 27635 \
+  --wtf %h/hosting/reliquary/data/Account --shots %h/hosting/reliquary/data/Screenshots \
+  --captures %h/hosting/reliquary/data/captures --choices %h/hosting/reliquary/data/choices.json \
+  --card %h/hosting/reliquary/data/card.jpg --prices %h/hosting/reliquary/data/prices.json
+Nice=10
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

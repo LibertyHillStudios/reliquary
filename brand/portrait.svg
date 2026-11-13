@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- The /rq window's portrait: logo.svg's shrine on a round night sky, made for the bronze ring of
+       the game's portrait frame. The disc runs under the ring; the shrine sits in its clear opening.
+       Built into addon/Reliquary/Media/portrait-*.tga by tools/build-portrait.sh. -->
+  <title>Reliquary</title>
+  <defs>
+    <radialGradient id="night" cx="50%" cy="44%" r="56%">
+      <stop offset="0" stop-color="#26355f"/>
+      <stop offset="0.6" stop-color="#131c37"/>
+      <stop offset="1" stop-color="#090c18"/>
+    </radialGradient>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="128" y1="58" x2="384" y2="440">
+      <stop offset="0" stop-color="#fbe7ad"/>
+      <stop offset="0.45" stop-color="#e8b04a"/>
+      <stop offset="1" stop-color="#a8611c"/>
+    </linearGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef3ff"/>
+      <stop offset="1" stop-color="#9fb6e2"/>
+    </linearGradient>
+    <linearGradient id="gemTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9f5ff"/>
+      <stop offset="1" stop-color="#5fb4e8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#9fc4ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#9fc4ff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="crescent">
+      <rect width="512" height="512" fill="#000"/>
+      <circle cx="252" cy="268" r="56" fill="#fff"/>
+      <circle cx="278" cy="249" r="49" fill="#000"/>
+    </mask>
+    <clipPath id="disc"><circle cx="256" cy="256" r="254"/></clipPath>
+  </defs>
+  <circle cx="256" cy="256" r="254" fill="url(#night)"/>
+  <g clip-path="url(#disc)" fill="#dfe8ff">
+    <circle cx="150" cy="148" r="2.6" opacity=".7"/><circle cx="372" cy="170" r="2.2" opacity=".55"/>
+    <circle cx="128" cy="300" r="2" opacity=".45"/><circle cx="388" cy="318" r="2.4" opacity=".6"/>
+    <circle cx="318" cy="118" r="1.8" opacity=".5"/><circle cx="196" cy="112" r="1.6" opacity=".4"/>
+  </g>
+  <!-- The shrine, its crescent and gem: logo.svg's, at 0.82 of its size, centred by its weight, not
+       its outline. Its plinth, moon and gem are heavy and low, so it sits two of the window's units
+       above the disc's centre, and the moon and gem move right onto the arch's axis. -->
+  <g transform="translate(256 234.55) scale(.82) translate(-256 -250)">
+    <circle cx="256" cy="270" r="150" fill="url(#glow)"/>
+    <g fill="none" stroke="url(#gold)" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M160 404 V236 C160 170 212 124 256 104 C300 124 352 170 352 236 V404" stroke-width="20"/>
+      <path d="M188 404 V244 C188 196 224 160 256 142 C288 160 324 196 324 244 V404" stroke-width="5" opacity=".55"/>
+      <path d="M128 404 H384" stroke-width="20"/>
+      <path d="M150 434 H362" stroke-width="16"/>
+    </g>
+    <path d="M256 58 L272 82 L256 104 L240 82 Z" fill="url(#gold)"/>
+    <g transform="translate(10 0)">
+      <rect width="512" height="512" fill="url(#moon)" mask="url(#crescent)"/>
+      <g transform="translate(262 286) scale(.82)">
+        <path d="M0 -40 L30 -10 L0 40 L-30 -10 Z" fill="#3f8fd0"/>
+        <path d="M0 -40 L30 -10 L0 -2 L-30 -10 Z" fill="url(#gemTop)"/>
+        <path d="M0 -2 L30 -10 L0 40 Z" fill="#2c6fae"/>
+        <path d="M0 -40 L-30 -10 L0 -2 Z" fill="#eaf8ff" opacity=".85"/>
+        <path d="M0 -40 L30 -10 L0 40 L-30 -10 Z" fill="none" stroke="#fbe7ad" stroke-width="3" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+</svg>

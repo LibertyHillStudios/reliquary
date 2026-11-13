@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+# Review shots from tools/shoot.mjs: large, and remade on demand. The README's picture is docs/dashboard.png.
+screenshots/
+.release/
